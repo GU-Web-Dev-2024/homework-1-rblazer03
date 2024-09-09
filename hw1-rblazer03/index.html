@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bekah CPCS332-01 Web Dev.</title>
+    <style>
+        h1 {
+            margin-left: 450px;
+            font-size: 30px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        p {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 id="header">HW1 Submission</h1>
+    <p id="paragraph"> I really enjoyed baisc <em>Web Development</em> in highchool and I want to continue that experience. I also don't know <strong>Java</strong> or how to use it very well so I'm hoping this class will give me good practical experience. Overall though, I'm hoping this class will help me with my research position becuase learning to code a website would be a good place to start to set up a game platform.</p>
+    <img src="/hw1-rblazer03/Rithmomachia Table.jpeg" alt="Rithmomachia Board">
+    <a href="https://www.ambito.com/opiniones/juegos/la-rithmomachia-o-la-batalla-los-numeros-un-juego-mesa-digno-recuperar-n5186888">For Image Origin, Click Here</a>
+    <p>
+        <button id="font-btn1">Change Font 1</button>
+        <button id="font-btn2">Change Font 2</button>
+        <button id="font-btn3">Change Font 3</button>
+    </p>
+
+    <script>
+        let fontLucida = document.getElementById("font-btn1")
+        fontLucida.addEventListener("click", function() 
+        {
+            updateFont(1);
+        });
+        let fontGeorgia = document.getElementById("font-btn2")
+        fontLucida.addEventListener("click", function() 
+        {
+            updateFont(2);
+        });
+        let fontFranklin = document.getElementById("font-btn3")
+        fontLucida.addEventListener("click", function() 
+        {
+            updateFont(3);
+        });
+        function updateFont(type){
+
+            let head = document.getElementById("header")
+            let para = document.getElementById("paragraph")
+
+            if (type == 1)
+            {
+                head.style.fontFamily = 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                para.style.fontFamily = 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            else if (type == 2)
+            {
+                head.style.fontFamily = Georgia, 'Times New Roman', Times, serif;
+                para.style.fontFamily = Georgia, 'Times New Roman', Times, serif;
+            }
+            else if (type == 3)
+            {
+                head.style.fontFamily = 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                para.style.fontFamily = 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            
+        } 
+    </script>
+</body>
+</html>
